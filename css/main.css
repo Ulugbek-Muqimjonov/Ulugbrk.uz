@@ -1,0 +1,230 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+}
+body {
+    display: flex;
+    /* flex-direction: column; */
+    margin: 0;
+    height: 100%;
+    color: #fff;
+    overflow: hidden;
+}
+main {
+    flex-grow: 1;
+}
+.container {
+    max-width: 1700px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.animation-wrap {
+    position: absolute;
+    /* width: 50%; */
+    height: auto;
+    padding-left: 50px;
+}
+.logo {
+    display: block;
+    margin-right: 100px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: cursive;
+}
+.site-hader {
+    padding-top: 50px;
+}
+.site-header__wrap {
+    display: flex;
+    align-items: center;
+}
+.site-header__navlist {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    column-gap: 50px;
+}
+.site-header__nav-item {
+    border-bottom: 1px solid transparent;
+    border-left: 1px solid transparent;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.site-header__nav-item--active{
+    border-color: #fff;
+}
+.site-header__nav-link {
+    display: block;
+    padding: 10px 50px;
+    text-decoration: none;
+    color: #fff;
+    font-family: cursive;
+    font-size: 20px;
+    opacity: 0.5;
+    transition: opacity 0.5s ease;
+}
+.site-header__nav-link:hover {
+    opacity: 1;
+}
+.hero__wrap {
+    width: 50%;
+    display: inline-block;
+    padding-top: 100px;
+}
+.hero__innerdiv {
+    display: inline-flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.hero__span {
+    display: block;
+    margin-bottom: 50px;
+    /* text-align: center; */
+    font-size: 30px;
+    color: #01fe5a;
+    font-family: cursive;
+}
+.hero__title {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    margin-bottom: 30px;
+    font-size: 60px; 
+    -webkit-text-stroke:4px #23460c71; 
+    color: transparent;
+    font-family:'Courier New', Courier, monospace;
+}
+.hero__title::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: #01fe87;
+    -webkit-text-stroke: 0 #383d52;
+    border-right: 2px solid #01fe87;
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+    content:attr(data-text);
+
+}
+.hero__job {
+    margin: 0;
+    margin-bottom: 30px;
+    font-size: 30px;
+    color: #01fe5a99;
+    font-family: cursive;
+}
+.hero__git {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 140%;
+    color: #607b96;
+    font-style: italic;
+    letter-spacing: 2px;
+}
+
+.hero__code {
+    font-size: 18px;
+    color: #07e97f;
+}
+.hero__const {
+    font-size: 18px;
+    color: rgb(33, 129, 224);
+}
+.hero__githublink {
+    /* text-decoration: none; */
+    color:#d8fe01de;
+}
+.site-footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding-right: 70px;
+    padding-left: 75px;
+    background-color: rgba(0, 102, 53, 0.832);
+}
+.site-footer__socialdiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.site-footer__list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    column-gap: 30px;
+    margin: 0;
+    padding-left:0;   
+    padding: 5px 0;
+}
+.site-footer__item {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    font-size: 16px;
+    font-family: cursive;
+    /* border-right: 1px solid #ffffff76; */
+}
+.site-footer__item:last-child {
+    border: none;
+}
+.site-footer__item:nth-child(2):before {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url("../images/tel.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position:center;
+    content: "";
+}
+.site-footer__img {
+    width: 20px;
+    height: 20px;
+}
+.site-footer__link {
+    color: #fff;
+}
+.site-footer__dowand {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    padding: 10px;
+    padding-left: 15px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: cursive;
+    letter-spacing: 2px;
+    font-size: 16px;
+    border-left: 1px solid #ffffff88;
+    cursor: pointer;
+}
+.site-footer__dowand::after {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url("../images/download.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    content: "";
+}
+
+@keyframes animate {
+    0%,10%,100%
+    {
+        width: 0;
+    }
+    70%,90% {
+        width: 100%;
+    }
+}
